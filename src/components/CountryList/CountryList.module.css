@@ -1,0 +1,46 @@
+.countryList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    width: 100%;    
+    padding: 0px 40px;
+    overflow-y: scroll;
+}
+
+.countryList::-webkit-scrollbar {
+    display: none;
+}
+
+.pageNumerator {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: auto;
+    padding: 10px 30px;
+}
+.pageNumerator::-webkit-scrollbar {
+    display: none;
+}
+
+.button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.button[id="previous"], .button[id="next"] {
+    background-color: #3084F2;
+}
+
+.button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
